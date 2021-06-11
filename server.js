@@ -14,7 +14,7 @@ app.use(requireHTTPS);
 app.use(express.static('./dist/angular-crash-course'));
 
 //Wait for a request to any path and redirect all of the requests to index.html
-app.get('/*', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile('index.html', {root: 'dist/angular-crash-course/'}
   );
 });
