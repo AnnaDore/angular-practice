@@ -15,7 +15,8 @@ const httpOptions = {
 })
 export class TaskService {
 
-  private apiUrl = 'http://localhost:5000/tasks'
+  // private apiUrl = 'http://localhost:5000/tasks'
+  private apiUrl = 'https://ang-pract-dodo.herokuapp.com/tasks/api'
 
   constructor(private http:HttpClient) { }
 
@@ -33,3 +34,4 @@ export class TaskService {
     return this.http.put<Task>(url, task, httpOptions)
   }
 }
+
